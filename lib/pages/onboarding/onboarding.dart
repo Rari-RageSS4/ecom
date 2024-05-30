@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Onboarding1 extends StatelessWidget {
-  const Onboarding1({super.key});
+class Onboarding extends StatelessWidget {
+  final int currentIndex;
+  const Onboarding({super.key, required this.currentIndex,});
+
+  List<String> get images => [
+    'assets/cart.png',
+    'assets/bag.png',
+    'assets/shop.png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +46,7 @@ class Onboarding1 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: Image.asset(
-                      'assets/cart.png',
+                      images[currentIndex],
                       height: 300,
                       width: Get.width,
                       fit: BoxFit.cover,
@@ -81,34 +88,7 @@ class Onboarding1 extends StatelessWidget {
                 width: Get.width,
                 fit: BoxFit.cover,
               ),
-            ),
-            //bottom
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                      padding: const EdgeInsets.all(16.0).copyWith(bottom: 25),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          InkWell(
-                            onTap: () {},
-                            child: const Text('Skip',
-                              style: TextStyle(
-                                color:Colors.white,
-                              ),
-                            ),
-                          ),
-                            
-                          // icon
-                          const CircleAvatar(
-                            child: Icon(Icons.arrow_forward_ios,
-                              size: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-            )
+            ), 
           ],
         ),
       ),

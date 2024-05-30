@@ -1,4 +1,3 @@
-import 'package:ecom/component/pageview.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
@@ -7,7 +6,7 @@ class SplashController extends GetxController {
     super.onInit();
     Future.delayed(
       const Duration(seconds: 3),
-      () => Get.to(Pageview())
+      () => Get.toNamed("/onboarding")
     );
   }
 }
