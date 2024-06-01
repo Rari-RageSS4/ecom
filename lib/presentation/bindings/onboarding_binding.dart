@@ -1,4 +1,4 @@
-import 'package:ecom/pages/onboarding/onboarding_controller.dart';
+import 'package:ecom/presentation/controllers/onboarding_controller.dart';
 import 'package:get/get.dart';
 
 class OnboardingBinding extends Bindings{

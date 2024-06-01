@@ -1,7 +1,7 @@
-import 'package:ecom/pages/onboarding/onboarding_pageview.dart';
-import 'package:ecom/pages/onboarding/onboarding_binding.dart';
-import 'package:ecom/pages/splashscreen/splash_binding.dart';
-import 'package:ecom/pages/splashscreen/splash_screen.dart';
+import 'package:ecom/presentation/screens/onboarding_pageview.dart';
+import 'package:ecom/presentation/bindings/onboarding_binding.dart';
+import 'package:ecom/presentation/bindings/splash_binding.dart';
+import 'package:ecom/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

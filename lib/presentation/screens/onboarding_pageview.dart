@@ -1,5 +1,5 @@
-import 'package:ecom/pages/onboarding/onboarding.dart';
-import 'package:ecom/pages/onboarding/onboarding_controller.dart';
+import 'package:ecom/presentation/screens/onboarding.dart';
+import 'package:ecom/presentation/controllers/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
