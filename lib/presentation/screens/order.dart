@@ -1,7 +1,9 @@
+import 'package:ecom/presentation/screens/network_error.dart';
+import 'package:ecom/presentation/screens/order_success.dart';
 import 'package:ecom/presentation/widgets/date.dart';
 import 'package:ecom/presentation/widgets/order_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+//import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class Order extends StatelessWidget {
@@ -46,7 +48,9 @@ class Order extends StatelessWidget {
                 icon: const Icon(Icons.shopping_cart),
                 tooltip: 'Open shopping cart',
                 onPressed: () {
-                  // handle the press
+                  // ORDER SUCCESSFUL
+                 // Get.to(const OrderSuccess());
+                 Get.to(const NetworkError());
                 },
               ),
             ),
@@ -68,7 +72,7 @@ class Order extends StatelessWidget {
               separatorBuilder: (BuildContext context, int index) {
                 return const Date();
               },
-            )
+            ),
           ],
         ),
       ),
