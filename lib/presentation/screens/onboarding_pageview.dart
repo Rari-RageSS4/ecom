@@ -49,7 +49,7 @@ class OnboardingPageview extends GetWidget<OnboardingController> {
                       if(controller.currentPageIndex != 2)
                       InkWell(
                         onTap: () {
-                          controller.pageChange();
+                          Get.toNamed('/navBar');
                         },
                         child: const Text(
                           'Skip',
