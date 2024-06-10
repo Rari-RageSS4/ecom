@@ -13,5 +13,7 @@ class AppColors {
   static const darkGrey = Color(0xff7C7C7C);
   static const selectedColor = Color(0XFF3560A5);
   static const unSelectedColor = Color(0XFF939393);
-
+  static const profileCamBg = Color(0XFF3560A5);
+  static const profileIconBg = Color(0XFFEDF1F7);
+  static const bg = Color(0XFFF5F6FB);
 }
