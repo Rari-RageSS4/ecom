@@ -1,11 +1,7 @@
-import 'package:ecom/presentation/screens/network_error.dart';
-import 'package:ecom/presentation/screens/order_success.dart';
 import 'package:ecom/presentation/widgets/appbar.dart';
 import 'package:ecom/presentation/widgets/date.dart';
 import 'package:ecom/presentation/widgets/order_item.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class Order extends StatelessWidget {
   const Order({super.key});
@@ -14,7 +10,7 @@ class Order extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: const AppBarWidget(),
+      appBar: const AppBarWidget(title: 'Orders',),
       body: SingleChildScrollView(
         child: Column(
           children: [

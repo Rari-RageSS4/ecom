@@ -1,4 +1,5 @@
 import 'package:ecom/presentation/styles/colors/colors.dart';
+import 'package:ecom/presentation/widgets/appbar.dart';
 import 'package:ecom/presentation/widgets/profile_listtile.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const AppBarWidget(title: 'Profile'),
       backgroundColor: AppColors.bg,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -165,7 +167,7 @@ class Profile extends StatelessWidget {
                 height: 90,
                 width: 90,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.amber),
+                  border: Border.all(color: const Color(0XFFbe9744), width: 2),
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: ClipRRect(
@@ -182,7 +184,8 @@ class Profile extends StatelessWidget {
                 bottom: 0,
                 right: 0,
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 2),
                     shape: BoxShape.circle,
                     color: AppColors.profileCamBg,
                   ),
@@ -190,6 +193,7 @@ class Profile extends StatelessWidget {
                   // height: 23,
                   // width: 23,
                   child: const Icon(
+                    size: 13,
                     Icons.camera_alt_rounded,
                     color: Colors.white,
                   ),

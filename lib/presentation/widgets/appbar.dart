@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarWidget({super.key});
+  const AppBarWidget({super.key, required this.title});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
         centerTitle: true,
-        title: const Text('Orders'),
+        title: Text(title),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
