@@ -1,6 +1,8 @@
+import 'package:ecom/presentation/widgets/appbar.dart';
+import 'package:ecom/presentation/widgets/date.dart';
+import 'package:ecom/presentation/widgets/gold_container.dart';
+import 'package:ecom/presentation/widgets/order_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Subscription1 extends StatelessWidget {
   const Subscription1({super.key});
@@ -8,61 +10,38 @@ class Subscription1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(gradient: LinearGradient(colors: [])),
-        child: Column(
-          children: [
-            // text
-            Text(
-              "Gold",
-              style: GoogleFonts.theNautigal(),
+      appBar: AppBarWidget(
+        title: "Subscription",
+        trailing: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            image: const DecorationImage(
+              image: AssetImage("assets/premium.png"),
             ),
-
-            // price container
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                //   border: Border.all(color: )
+          ),
+          height: 50,
+          width: 50,
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              const SubscriptionContainer(),
+              const SizedBox(height: 20),
+              const Date(),
+              ListView.separated(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 4,
+                itemBuilder: (context, index) => const OrderItem(),
+                separatorBuilder: (BuildContext context, int index) {
+                  return const Date();
+                },
               ),
-              height: 150,
-              width: 300,
-              child: const Column(
-                children: [
-                  Text(
-                    '₹799',
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Text(
-                    '05 Jan to 20 Jan 2024',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-            ),
-
-            // save amount container
-            Container(
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(colors: []),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              height: 90,
-              width: 300,
-              child: const Text(
-                'Saved amount ₹193',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-
-            // view less clickable,
-            const Text(
-              'View less',
-              style: TextStyle(color: Colors.white),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );

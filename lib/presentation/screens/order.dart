@@ -10,24 +10,29 @@ class Order extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: const AppBarWidget(title: 'Orders',),
+      appBar: const AppBarWidget(
+        title: 'Orders',
+      ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            //date
-            const Date(),
-            
-            // items
-            ListView.separated(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: 4,
-              itemBuilder: (context, index) => const OrderItem(),
-              separatorBuilder: (BuildContext context, int index) {
-                return const Date();
-              },
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              //date
+              const Date(),
+
+              // items
+              ListView.separated(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 4,
+                itemBuilder: (context, index) => const OrderItem(),
+                separatorBuilder: (BuildContext context, int index) {
+                  return const Date();
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:ecom/presentation/controllers/nav_bar_controller.dart';
 import 'package:ecom/presentation/screens/profile.dart';
+import 'package:ecom/presentation/screens/subscription1.dart';
 import 'package:ecom/presentation/styles/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,7 +20,7 @@ class BottomNavBar extends GetWidget<NavBarController> {
                 index: controller.selectedIndex,
                 children: [
                   Container(),
-                  Container(),
+                  const Subscription1(),
                   Container(),
                   Container(),
                   const Profile()

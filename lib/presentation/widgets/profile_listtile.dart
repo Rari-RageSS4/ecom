@@ -8,14 +8,17 @@ class ProfileListtile extends StatelessWidget {
     required this.icon,
     required this.text,
     this.isTrailing = true,
+    this.onTap,
   });
   final Widget icon;
   final String text;
   final bool isTrailing;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: onTap ?? () {},
       contentPadding: EdgeInsets.zero,
       leading: Container(
           padding: const EdgeInsets.all(6),
@@ -24,11 +27,15 @@ class ProfileListtile extends StatelessWidget {
             color: AppColors.profileIconBg,
           ),
           child: icon),
-      title: Text(text, style: GoogleFonts.urbanist(
-        fontSize: 16,
-        fontWeight: FontWeight.bold
-      )),
-      trailing: isTrailing? const Icon(Icons.arrow_forward_ios_rounded, size: 10,) : const SizedBox(),
+      title: Text(text,
+          style:
+              GoogleFonts.urbanist(fontSize: 16, fontWeight: FontWeight.bold)),
+      trailing: isTrailing
+          ? const Icon(
+              Icons.arrow_forward_ios_rounded,
+              size: 10,
+            )
+          : const SizedBox(),
     );
   }
 }

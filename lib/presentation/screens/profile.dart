@@ -1,7 +1,10 @@
+import 'package:ecom/presentation/screens/order.dart';
+import 'package:ecom/presentation/screens/refer_earn.dart';
 import 'package:ecom/presentation/styles/colors/colors.dart';
 import 'package:ecom/presentation/widgets/appbar.dart';
 import 'package:ecom/presentation/widgets/profile_listtile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -9,6 +12,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: const AppBarWidget(title: 'Profile'),
       backgroundColor: AppColors.bg,
       body: Padding(
@@ -52,27 +56,26 @@ class Profile extends StatelessWidget {
 
   Container rateLogout() {
     return Container(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.white,
-              ),
-              child: Column(
-                children: [
-                  ProfileListtile(
-                    icon: Image.asset('assets/icons/edit_square.png'),
-                    text: 'Rate us on playstore',
-                    isTrailing: false,
-                  ),
-                  ProfileListtile(
-                    icon: Image.asset('assets/icons/logout.png'),
-                    text: 'Logout',
-                    isTrailing: false,
-                  ),
-                ],
-              ),
-            );
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.white,
+      ),
+      child: Column(
+        children: [
+          ProfileListtile(
+            icon: Image.asset('assets/icons/edit_square.png'),
+            text: 'Rate us on playstore',
+            isTrailing: false,
+          ),
+          ProfileListtile(
+            icon: Image.asset('assets/icons/logout.png'),
+            text: 'Logout',
+            isTrailing: false,
+          ),
+        ],
+      ),
+    );
   }
 
   Container support() {
@@ -121,6 +124,7 @@ class Profile extends StatelessWidget {
             style: TextStyle(color: Colors.grey),
           ),
           ProfileListtile(
+            onTap: () => Get.to(() => const Order()),
             icon: Image.asset('assets/icons/bag_icon.png'),
             text: 'My Orders',
           ),
@@ -146,7 +150,10 @@ class Profile extends StatelessWidget {
       ),
       child: ProfileListtile(
           icon: Image.asset('assets/icons/person.png'),
-          text: "Refer friends & Earn"),
+          text: "Refer friends & Earn",
+          onTap: () => Get.to(() => const ReferEarn()),
+        ),
+          
     );
   }
 
