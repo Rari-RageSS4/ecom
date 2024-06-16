@@ -1,5 +1,6 @@
+import 'package:ecom/presentation/styles/dashed_line_painter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+//import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,6 +11,7 @@ class ReferEarn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.only(left: 10.0, top: 10),
           child: InkWell(
@@ -76,7 +78,7 @@ class ReferEarn extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-        
+
             // small text
             Padding(
               padding: const EdgeInsets.only(top: 24, left: 50, right: 50),
@@ -89,7 +91,7 @@ class ReferEarn extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-        
+
             // how referal works container
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -131,123 +133,188 @@ class ReferEarn extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 16, bottom: 16),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Column(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  color: Colors.white,
-                                ),
-                                child: Image.asset('assets/Add User.png'),
-                              ),
-                              const SizedBox(
-                                height: 18,
-                              ),
-                              SizedBox(
-                                height: 63,
-                                width: 94,
-                                child: Text(
-                                  'Share the referral code with friends',
-                                  style: GoogleFonts.urbanist(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ],
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                            ),
+                            child: Image.asset('assets/icons/Add User.png'),
                           ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          
                           // const Text(
                           //   " - - - - - - - ",
                           //   style: TextStyle(
                           //     color: Colors.white,
                           //   ),
                           // ),
-                          Column(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  color: Colors.white,
-                                ),
-                                child: Image.asset('assets/rupee.png'),
-                              ),
-                              const SizedBox(
-                                height: 18,
-                              ),
-                              SizedBox(
-                                height: 63,
-                                width: 94,
-                                child: Text(
-                                  'Share the referral code with friends',
-                                  style: GoogleFonts.urbanist(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ],
+                          CustomPaint(
+                            size: const Size(60, 1),
+                            painter: DashedLinePainter(),
                           ),
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                            ),
+                            child: Image.asset('assets/icons/rupee.png'),
+                          ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          
                           // const Text(
                           //   " - - - - - - - ",
                           //   style: TextStyle(
                           //     color: Colors.white,
                           //   ),
                           // ),
-                          Column(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  color: Colors.white,
-                                ),
-                                child: Image.asset('assets/gift.png'),
-                              ),
-                              const SizedBox(
-                                height: 18,
-                              ),
-                              SizedBox(
-                                height: 63,
-                                width: 94,
-                                child: Text(
-                                  'Share the referral code with friends',
-                                  style: GoogleFonts.urbanist(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ],
+                          CustomPaint(
+                            size: const Size(60, 1),
+                            painter: DashedLinePainter(),
                           ),
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                            ),
+                            child: Image.asset('assets/icons/gift.png'),
+                          ),
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          
                         ],
                       ),
+                      
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                            height: 63,
+                            width: 94,
+                            child: Text(
+                              'Share the referral code with friends',
+                              style: GoogleFonts.urbanist(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+
+                         
+
+                          SizedBox(
+                            height: 63,
+                            width: 94,
+                            child: Text(
+                              'Your friend joins & buy our subscription',
+                              style: GoogleFonts.urbanist(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+
+                          SizedBox(
+                            height: 63,
+                            width: 94,
+                            child: Text(
+                              'You earn ₹300,They earn ₹100',
+                              style: GoogleFonts.urbanist(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+
+                      ],
                     )
                   ],
                 ),
               ),
             ),
-        
+
             // whatsapp, messenger, share buttons
-            Row(
-              children: [
-                // whatsapp container
-                Container(),
-        
-                // messenger container
-                Container(),
-        
-                // invite friends
-                Container(),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  // whatsapp container
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: const Color(0xFF477f6b),
+                    ),
+                    height: 54,
+                    width: 54,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Image.asset('assets/icons/whatsapp.png'),
+                    ),
+                  ),
+
+                  const SizedBox(width: 8,),
+              
+                  // messenger container
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: const Color(0xFF477f6b),
+                    ),
+                    height: 54,
+                    width: 54,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Image.asset('assets/icons/msg.png'),
+                    ),
+                  ),
+
+                  const SizedBox(width: 8,),
+              
+                  // invite friends
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: const Color(0xFF477f6b),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/icons/share.png'),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Text(
+                            'Invite friends',
+                            style: GoogleFonts.urbanist(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),
